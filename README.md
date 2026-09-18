@@ -16,7 +16,7 @@ In this gentle, no-experience-required introduction to LLM systems, I demystify 
 
 ## The Three Systems
 
-The talk demonstrates three progressively more autonomous ways to use an LLM for the same task: answering clinical questions from a patient's chart of synthetic medical notes.
+The talk demonstrates three progressively more "agentic" ways to use an LLM for the same task: answering clinical questions from a patient's chart of synthetic medical notes.
 
 ### 1. Conversation (bare LLM call)
 
@@ -33,7 +33,7 @@ response = client.responses.create(
 print(response.output_text)
 ```
 
-The LLM has no access to patient data, so it can only produce generic or hallucinated responses. Every query scored **1/5** in the evaluation.
+The LLM has no access to patient data, so it can only produce generic or hallucinated responses.
 
 ### 2. Workflow (fixed multi-step pipeline)
 
@@ -67,7 +67,7 @@ This approach always processes every note (even irrelevant ones), which increase
 
 ### 3. Agent (LLM-driven tool loop)
 
-The LLM itself decides which tools to call and when to stop. Given tools to list, preview, and read individual notes, it explores the chart selectively and produces a targeted answer.
+The LLM itself decides which tools to call and when to stop. Given tools to list, preview, and read individual notes, it explores the chart selectively and produces a more targeted answer.
 
 ```python
 client = OpenAI(...)
@@ -137,8 +137,8 @@ To compare the three systems, we ran each one against **10 clinical queries × 3
 **Key takeaways:**
 
 - **Conversation** (red) — cheapest but useless: with no chart access, every response scored 1.
-- **Agent** (green) — best quality-to-cost ratio: selectively reads relevant notes, achieving high scores at low cost.
 - **Workflow** (blue) — highest cost: processes every note for every query, which adds cost without always improving quality. Performs well on holistic questions but can struggle on targeted ones.
+- **Agent** (green) — best quality-to-cost ratio: selectively reads relevant notes, achieving high scores at low cost.
 
 
 ---
