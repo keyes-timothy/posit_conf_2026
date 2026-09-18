@@ -1,0 +1,24 @@
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+
+# Quarto render output
+slides.html
+slides_files/
+*_files/
+
+# Office temp files
+~$*
+
+# Environment config (contains internal URLs / secrets)
+.env
+
+# uv lock (optional — remove this line if you want to pin dependencies)
+# uv.lock

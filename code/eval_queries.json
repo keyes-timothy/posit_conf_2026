@@ -1,0 +1,52 @@
+[
+  {
+    "query_id": "Q01",
+    "category": "holistic",
+    "query": "What active medical problems does this patient currently have?"
+  },
+  {
+    "query_id": "Q02",
+    "category": "holistic",
+    "query": "Summarize this patient's overall medical history"
+  },
+  {
+    "query_id": "Q03",
+    "category": "holistic",
+    "query": "What medications is the patient currently taking and why?"
+  },
+  {
+    "query_id": "Q04",
+    "category": "recent",
+    "query": "Summarize the workup for this patient's lightheadedness"
+  },
+  {
+    "query_id": "Q05",
+    "category": "recent",
+    "query": "What was the patient's most recent medication change?"
+  },
+  {
+    "query_id": "Q06",
+    "category": "recent",
+    "query": "Has the patient had any emergency department visits in the past year?"
+  },
+  {
+    "query_id": "Q07",
+    "category": "specific",
+    "query": "Summarize the cardiology notes for this patient"
+  },
+  {
+    "query_id": "Q08",
+    "category": "specific",
+    "query": "What did Dr. Helen Wu recommend for this patient?"
+  },
+  {
+    "query_id": "Q09",
+    "category": "specific",
+    "query": "Give me a summary of the patient's most recent ED visit"
+  },
+  {
+    "query_id": "Q10",
+    "category": "specific",
+    "query": "What was the outcome of the patient's TIA workup in 2025?"
+  }
+]

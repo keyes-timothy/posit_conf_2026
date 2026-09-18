@@ -1,0 +1,897 @@
+query_id,category,query,system,replicate,response,input_tokens,output_tokens,cost_usd
+Q01,holistic,What active medical problems does this patient currently have?,conversation,1,"I can help, but I don’t yet have the patient’s chart, note, or problem list to review.
+
+Please paste one of the following:
+- the most recent progress note,
+- discharge summary,
+- problem list,
+- or relevant labs/imaging/med list,
+
+and I’ll identify the patient’s **current active medical problems**.",27,73,0.000349
+Q01,holistic,What active medical problems does this patient currently have?,conversation,2,"I can help, but I don’t yet have the patient’s chart, note, or problem list to review.
+
+Please paste one of the following:
+- the most recent progress note
+- the assessment/plan section
+- the problem list
+- discharge summary
+- relevant labs/imaging/med list
+
+Then I’ll extract the patient’s **current active medical problems** for you.",27,82,0.000389
+Q01,holistic,What active medical problems does this patient currently have?,conversation,3,"I can help, but I don’t have the patient’s chart, note, or problem list yet.
+
+Please paste one of the following:
+- the most recent progress note / H&P / discharge summary
+- the active problem list
+- relevant labs/imaging/med list
+
+Then I’ll extract the patient’s **current active medical problems** and summarize them clearly.",27,78,0.000371
+Q01,holistic,What active medical problems does this patient currently have?,workflow,1,"Her active medical problems are:
+
+- Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy, and mild albuminuria/early diabetic kidney involvement
+- Hypertension, currently well controlled
+- Prior TIA, on secondary prevention
+- Obesity (BMI ~32)
+- Mild bilateral knee osteoarthritis
+- Intermittent GERD
+- Recent lightheadedness/possible orthostasis
+- New atrial fibrillation, rate controlled, with concern for stroke risk",22865,2240,0.027229
+Q01,holistic,What active medical problems does this patient currently have?,workflow,2,"The patient’s active medical problems are:
+
+- Type 2 diabetes mellitus with mild nonproliferative diabetic retinopathy, and mild albuminuria/early diabetic kidney involvement
+- Hypertension, currently well controlled
+- Prior TIA, on secondary prevention
+- Obesity (BMI ~32)
+- Mild bilateral knee osteoarthritis
+- Intermittent GERD, controlled with PRN omeprazole
+- Intermittent lightheadedness/possible orthostasis
+- Possible/new atrial fibrillation under evaluation or recently diagnosed, depending on the note",22803,2193,0.026971
+Q01,holistic,What active medical problems does this patient currently have?,workflow,3,"The patient’s active medical problems are:
+
+- **Type 2 diabetes mellitus** with **mild nonproliferative diabetic retinopathy** and mild albuminuria/early kidney involvement  
+- **Hypertension** (generally well controlled, sometimes low/orthostatic)  
+- **Prior TIA** on secondary prevention  
+- **Obesity** (BMI ~32)  
+- **Mild bilateral knee osteoarthritis**  
+- **GERD**  
+- **Intermittent lightheadedness/orthostatic hypotension**  
+- **New-onset/paroxysmal atrial fibrillation** (rate controlled, anticoagulated)",22815,2225,0.027124
+Q01,holistic,What active medical problems does this patient currently have?,agent,1,"Based on the most recent notes, the patient’s **active/current medical problems** are:
+
+1. **Paroxysmal atrial fibrillation (AF)**  
+   - Rate controlled on **metoprolol**
+   - Anticoagulated with **apixaban**
+
+2. **Hypertension**
+   - Currently reasonably controlled
+   - History of **orthostatic/positional lightheadedness** and low standing BPs, improved after medication adjustments
+
+3. **Type 2 diabetes mellitus**
+   - Fair control; recent **A1c ~7.1%**
+   - On **metformin** and **empagliflozin**
+
+4. **Prior TIA / small-vessel cerebrovascular disease**
+   - On secondary prevention with **statin** and often **aspirin** per notes
+
+5. **Obesity**
+   - BMI around **32**
+
+6. **Mild diabetic retinopathy (mild NPDR)**
+   - Stable, followed by Ophthalmology
+
+7. **Bilateral knee osteoarthritis**
+   - Mild to moderate symptoms, managed conservatively
+
+8. **GERD**
+   - Intermittent, controlled with PRN omeprazole
+
+9. **Intermittent orthostatic lightheadedness**
+   - Ongoing but improved; likely related to position changes and/or medications
+
+If you want, I can also separate these into **chronic active problems vs. resolved/controlled issues**.",8039,597,0.008716
+Q01,holistic,What active medical problems does this patient currently have?,agent,2,"Based on the most recent notes, her **active/current medical problems** are:
+
+1. **Paroxysmal atrial fibrillation (AF)**  
+   - Rate controlled on **metoprolol**
+   - Anticoagulated with **apixaban**
+
+2. **Hypertension**
+   - Generally controlled, though she has had some **orthostatic/low standing blood pressures**
+
+3. **Orthostatic lightheadedness / positional dizziness**
+   - Improved but still occurs intermittently, likely related to medications and/or hydration status
+
+4. **Type 2 diabetes mellitus**
+   - Fair control on **metformin** and **empagliflozin**
+   - Associated **mild diabetic retinopathy** is noted in the history
+
+5. **Prior TIA / cerebrovascular disease**
+   - On secondary prevention with **statin** and **aspirin**; no recurrent neurologic symptoms
+
+6. **Obesity**
+   - BMI around 32
+
+7. **Mild knee osteoarthritis**
+   - Stable, managed conservatively
+
+8. **GERD**
+   - Intermittent, controlled with PRN omeprazole
+
+If you want, I can also separate these into **problem list vs. resolved issues** or **medication-related active issues**.",6257,483,0.006866
+Q01,holistic,What active medical problems does this patient currently have?,agent,3,"Based on the most recent notes, the patient’s **active medical problems** are:
+
+1. **Paroxysmal atrial fibrillation (AF)**  
+   - Rate controlled on **metoprolol**
+   - Anticoagulated with **apixaban**
+
+2. **Hypertension**
+   - Generally controlled, though she has had **intermittent orthostatic/low standing blood pressures**
+
+3. **Orthostatic lightheadedness / positional presyncope**
+   - Improved but still occurs occasionally, likely medication- and/or volume-related
+
+4. **Type 2 diabetes mellitus**
+   - Fair control; most recent A1c noted as **7.1%**
+   - On **metformin** and **empagliflozin**
+
+5. **History of TIA / cerebrovascular disease**
+   - On secondary prevention with **statin** and **aspirin** in the notes
+
+6. **Obesity**
+   - BMI around **32**
+
+7. **Mild knee osteoarthritis**
+   - Stable, managed conservatively
+
+8. **GERD**
+   - Intermittent, controlled with PRN **omeprazole**
+
+9. **Mild nonproliferative diabetic retinopathy**
+   - Mentioned in cardiology history as part of diabetes complications
+
+If you want, I can also turn this into a concise problem list with only the diagnoses and current treatment status.",6257,509,0.006983
+Q02,holistic,Summarize this patient's overall medical history,conversation,1,"Sure — please provide the patient’s medical records, notes, problem list, medications, labs, or any other history you want summarized, and I’ll condense it into an overall medical history.",25,43,0.000212
+Q02,holistic,Summarize this patient's overall medical history,conversation,2,"Sure — please provide the patient’s medical history, chart notes, problem list, medications, labs, or any other relevant records, and I’ll summarize the overall history clearly and concisely.",25,43,0.000212
+Q02,holistic,Summarize this patient's overall medical history,conversation,3,"Sure — please provide the patient’s medical records, notes, problem list, medications, labs, or any other relevant history you want summarized. Once I have the details, I can give you a concise overall medical history summary.",25,49,0.000239
+Q02,holistic,Summarize this patient's overall medical history,workflow,1,"This is a 68-year-old woman with a generally stable chronic medical history including:
+
+- **Hypertension**
+- **Type 2 diabetes mellitus** with **fair/improving control** on metformin and empagliflozin
+- **Obesity**
+- **Prior TIA (March 2025)** with **full neurologic recovery**, on **secondary stroke prevention** with aspirin/statin, later also anticoagulated after AF diagnosis
+- **Paroxysmal atrial fibrillation** newly diagnosed, now **rate-controlled on metoprolol** and **anticoagulated with apixaban**
+- **Mild nonproliferative diabetic retinopathy** without macular edema
+- **Mild diabetic kidney involvement/microalbuminuria** but **preserved renal function**
+- **Mild bilateral knee osteoarthritis** causing chronic activity-related pain, managed conservatively
+- **Intermittent GERD**, controlled with PRN omeprazole/lifestyle measures
+
+She has also had **intermittent orthostatic lightheadedness/presyncope**, likely related to blood pressure/medication effects, with no recurrent stroke symptoms, syncope, heart failure symptoms, or major bleeding. Overall, her chronic conditions are mostly well controlled and she remains clinically stable.",23587,3129,0.031771
+Q02,holistic,Summarize this patient's overall medical history,workflow,2,"This is a 68-year-old woman with multiple chronic vascular/metabolic conditions: hypertension, type 2 diabetes, obesity, hyperlipidemia, and a prior TIA (3/2025) with full neurologic recovery. Her diabetes is moderately controlled (A1c about 7.1) on metformin and empagliflozin, with mild nonproliferative diabetic retinopathy and mild albuminuria but preserved kidney function. She also has well-controlled blood pressure and lipids on lisinopril/amlodipine, atorvastatin, and aspirin.
+
+Other chronic issues include mild bilateral knee osteoarthritis, intermittent GERD, and stable eye findings without macular edema. More recently, she developed paroxysmal atrial fibrillation, now rate-controlled on metoprolol and anticoagulated with apixaban. She has had intermittent orthostatic lightheadedness/presyncope, likely related to low-normal blood pressures and medication effects, prompting antihypertensive adjustment and cardiac workup. Overall, she is clinically stable without recurrent stroke symptoms, heart failure, or major diabetic complications.",23628,3136,0.031833
+Q02,holistic,Summarize this patient's overall medical history,workflow,3,"This is a 68-year-old woman with multiple chronic vascular and metabolic conditions: hypertension, type 2 diabetes, obesity, hyperlipidemia, and a prior TIA in 3/2025 with full neurologic recovery. Her diabetes is moderately controlled on metformin and empagliflozin, with mild stable nonproliferative diabetic retinopathy and mild albuminuria but preserved kidney function. She also has well-controlled blood pressure and lipids on lisinopril, amlodipine, atorvastatin, and aspirin.
+
+More recently, she developed paroxysmal atrial fibrillation, now rate-controlled on metoprolol and anticoagulated with apixaban. She has had intermittent orthostatic lightheadedness/presyncope, likely related to low blood pressure or medication effects, which has improved with medication adjustment and close follow-up. Other stable issues include mild bilateral knee osteoarthritis and intermittent GERD. She has had no recurrent stroke symptoms, heart failure symptoms, or major bleeding.",23689,3175,0.032054
+Q02,holistic,Summarize this patient's overall medical history,agent,1,"Here’s an overall summary of the patient’s medical history based on the available notes:
+
+**Patient:** Margaret Chen, 68-year-old woman
+
+### Chronic conditions
+- **Hypertension (HTN):** Longstanding, generally well controlled on lisinopril; amlodipine was later reduced and then stopped due to low blood pressure/orthostatic symptoms.
+- **Type 2 diabetes mellitus (T2DM):** Treated with metformin and empagliflozin. Control has been fair, with A1c around **7.1–7.2%** in later notes. No hypoglycemia reported.
+- **Hyperlipidemia / vascular risk management:** On atorvastatin with lipids at goal.
+- **Obesity:** BMI consistently around **32**.
+- **GERD:** Intermittent, controlled with PRN omeprazole.
+- **Bilateral knee osteoarthritis:** Mild, chronic, worse with prolonged standing/gardening; managed conservatively with acetaminophen, topical diclofenac, exercise, and weight-loss advice.
+- **Mild nonproliferative diabetic retinopathy (NPDR):** Noted on eye exam; followed by ophthalmology.
+- **Mild albuminuria:** Early diabetic kidney involvement suspected, but renal function has remained preserved.
+
+### Major vascular / neurologic history
+- **TIA in March 2025:** No residual neurologic deficits afterward. She has remained on secondary prevention with aspirin and statin.
+- **Recurrent lightheadedness/presyncope:** Over months, usually positional or with prolonged standing/gardening. Workup showed **orthostatic hypotension** contributing.
+
+### Cardiac history
+- **New-onset paroxysmal atrial fibrillation (AF):**
+  - First identified during ED evaluation in 2025.
+  - Initially rate controlled, later treated with **metoprolol** and **apixaban** because of high stroke risk.
+  - CHA2DS2-VASc is high due to age, HTN, DM, and prior TIA.
+- **Orthostatic hypotension / medication-related low BP:** Likely worsened by antihypertensives and possibly empagliflozin; improved after reducing/stopping amlodipine and adjusting metoprolol.
+- No evidence in the notes of heart failure, ischemic heart disease, or structural heart disease, though echo/ambulatory monitoring were ordered.
+
+### Other evaluations
+- **GI:** Intermittent reflux/dyspepsia without alarm symptoms; no indication for endoscopy.
+- **Rheumatology:** Knee pain evaluated and felt to be osteoarthritis, not inflammatory arthritis.
+- **Neurology:** Lightheadedness was not felt to be due to a new neurologic event; no focal deficits or repeat stroke symptoms.
+
+### Current overall status by latest note
+- She is **clinically improved**, with:
+  - No further presyncope/lightheadedness after medication adjustment
+  - No palpitations, chest pain, dyspnea, syncope, or neurologic deficits
+  - Stable diabetes and kidney function
+  - No bleeding on apixaban
+  - BP and AF rate reasonably controlled
+
+### Current long-term medication themes
+- **Apixaban** for AF stroke prevention
+- **Metoprolol** for AF rate control
+- **Lisinopril** for HTN/renal protection
+- **Metformin + empagliflozin** for diabetes
+- **Atorvastatin** and **aspirin** for secondary stroke prevention
+- **Omeprazole PRN** for GERD
+
+### Functional / social history
+- Retired schoolteacher, lives with husband
+- Independent in activities of daily living
+- Never smoker, no alcohol or drug use
+- Remains active with daily walking and gardening
+
+If you want, I can also turn this into a **problem list**, a **one-paragraph chart summary**, or a **timeline of major events**.",15114,1445,0.017838
+Q02,holistic,Summarize this patient's overall medical history,agent,2,"Here’s an overall summary of the patient’s medical history based on the available notes:
+
+**Patient:** Margaret Chen, older adult woman with multiple chronic conditions and good functional status. She lives with her husband, is retired, remains active with daily walking and gardening, and has no tobacco, alcohol, or drug use.
+
+### Major chronic conditions
+- **Hypertension (HTN):** Longstanding, generally well controlled on lisinopril and previously amlodipine. Over time, blood pressure became low-normal with **orthostatic hypotension**, leading to amlodipine dose reduction and eventually discontinuation. BP later improved after medication adjustment.
+- **Type 2 diabetes mellitus (T2DM):** Managed with **metformin 1000 mg BID** and **empagliflozin 10 mg daily**. Glycemic control has been fair, with A1c generally around **7.1–7.6%**. No hypoglycemia reported. She has **mild albuminuria** but preserved kidney function.
+- **Obesity:** BMI consistently around **32**. She has made modest lifestyle efforts with walking and dietary changes.
+- **Hyperlipidemia / ASCVD risk:** On **atorvastatin 40 mg daily** with LDL at goal.
+- **GERD:** Mild, intermittent, controlled with PRN omeprazole.
+- **Mild bilateral knee osteoarthritis:** Chronic, mild, managed conservatively with activity modification and acetaminophen as needed.
+- **Mild nonproliferative diabetic retinopathy (NPDR):** Followed by ophthalmology, stable by history.
+
+### Cerebrovascular / cardiovascular history
+- **Prior TIA (March 2025):** No residual neurologic deficits. She has remained on secondary prevention with aspirin and statin.
+- **Atrial fibrillation (AF):**
+  - Initially noted on ED evaluation during workup for lightheadedness/palpitations.
+  - Progressed from new-onset AF to **paroxysmal AF**.
+  - Treated with **apixaban 5 mg BID** for stroke prevention and **metoprolol tartrate 25 mg BID** for rate control.
+  - She has had no bleeding complications reported.
+- **Orthostatic hypotension / presyncope:** Recurrent episodes of positional dizziness/lightheadedness, often with standing or prolonged gardening. This was felt to be multifactorial, related to orthostasis and medication effects. Symptoms improved after reducing/stopping amlodipine and adjusting rate control.
+
+### Kidney / metabolic status
+- **Renal function preserved:** Creatinine around **0.8–0.9**, eGFR >60.
+- **Mild albuminuria:** Suggestive of early diabetic kidney involvement, but stable.
+- **No major electrolyte abnormalities** or anemia noted in the available labs.
+
+### Functional / social history
+- Independent in activities of daily living.
+- Remains physically active with **daily walks (~20 minutes/day)** and gardening.
+- No smoking, alcohol, or illicit drug use.
+
+### Current overall status by latest note
+- Clinically stable and feeling better.
+- **No recurrent presyncope/lightheadedness** after medication adjustments.
+- **AF is rate controlled** and she remains anticoagulated.
+- **Blood pressure is controlled** on lisinopril alone.
+- **Diabetes remains moderately controlled** with A1c about **7.1%**.
+- Ongoing follow-up with primary care, cardiology, endocrinology, and ophthalmology.
+
+If you want, I can also turn this into a **problem list**, a **one-paragraph chart summary**, or a **timeline of major events**.",12249,1100,0.014137
+Q02,holistic,Summarize this patient's overall medical history,agent,3,"Overall, this patient is a 68-year-old woman with a chronic medical history notable for:
+
+- **Hypertension**
+- **Type 2 diabetes mellitus**
+- **Obesity** (BMI around 32)
+- **GERD / dyspepsia**
+- **Mild bilateral knee osteoarthritis** with chronic knee pain
+- **Prior TIA in March 2025** with full neurologic recovery
+- **Mild nonproliferative diabetic retinopathy** on eye exams
+- **Paroxysmal atrial fibrillation** diagnosed later, treated with **apixaban** and **metoprolol**
+- **Intermittent lightheadedness/presyncope**, often positional, which prompted ED visits and cardiology/neurology evaluation
+
+### Course over time
+- **Primary care and endocrinology** notes show generally good chronic disease follow-up, with home blood pressures usually controlled and diabetes reasonably controlled on **metformin**.
+- **Ophthalmology** followed her diabetic eye disease; vision has been stable without acute eye symptoms.
+- **Cardiology** became involved after recurrent dizziness and an ED EKG showed **atrial fibrillation**. She was started on **apixaban** for stroke prevention and **metoprolol** for rate control.
+- **Neurology** evaluated her after the TIA and later for recurrent “woozy” spells; no recurrent focal neurologic deficits were documented.
+- **Gastroenterology** managed intermittent reflux symptoms, which improved with **PRN omeprazole** and diet changes.
+- **Orthopedics/Rheumatology** evaluated chronic knee pain and felt it was most consistent with **osteoarthritis**, not inflammatory arthritis.
+
+### Current overall picture
+Her history is dominated by **cardiometabolic disease**: HTN, T2DM, obesity, prior TIA, and atrial fibrillation, with associated secondary stroke prevention needs. She also has stable chronic issues including **GERD**, **knee osteoarthritis**, and **mild diabetic retinopathy**. More recent notes suggest her **lightheadedness improved** after medication adjustments, and she is generally doing well overall.",5063,1084,0.008675
+Q03,holistic,What medications is the patient currently taking and why?,conversation,1,"I don’t have the patient’s medication list or chart details in this conversation, so I can’t say what they’re currently taking or why.
+
+If you paste the medication list, discharge summary, or recent note, I can help you identify:
+- each medication
+- the likely indication/reason
+- any duplicates, interactions, or missing meds
+
+If helpful, you can send it in this format:
+- Medication name, dose, frequency
+- Any diagnoses/problems listed
+
+",27,99,0.000466
+Q03,holistic,What medications is the patient currently taking and why?,conversation,2,"I don’t have the patient’s medication list or chart details in this conversation, so I can’t determine what they’re currently taking or the reasons for each medication.
+
+If you share the medication list, discharge summary, or chart note, I can help identify:
+- each medication
+- the likely indication/reason
+- any duplicates, interactions, or missing meds
+
+If you want, paste the list here and I’ll organize it for you.",27,93,0.000439
+Q03,holistic,What medications is the patient currently taking and why?,conversation,3,"I don’t have the patient’s medication list or chart details in this conversation, so I can’t determine what they’re currently taking or the reasons for each medication.
+
+If you paste the medication list, I can help you summarize:
+- **Medication name**
+- **Dose/frequency**
+- **Likely indication/why it’s prescribed**
+- **Any important cautions or interactions**
+
+If you want, send the list exactly as written and I’ll organize it for you.",27,99,0.000466
+Q03,holistic,What medications is the patient currently taking and why?,workflow,1,"The patient is currently taking:
+
+- **Lisinopril** and **amlodipine** for **hypertension**
+- **Metformin** and **empagliflozin** for **type 2 diabetes**
+- **Aspirin** and **atorvastatin** for **secondary stroke/TIA prevention** and vascular risk reduction
+- **PRN omeprazole** for **intermittent GERD**
+- **Apixaban** and **metoprolol** for **new atrial fibrillation** — apixaban for **stroke prevention** and metoprolol for **rate control**
+- **Occasional acetaminophen** for **knee osteoarthritis pain**",23495,2914,0.030734
+Q03,holistic,What medications is the patient currently taking and why?,workflow,2,"The patient is currently taking:
+
+- **Lisinopril 40 mg daily** and **amlodipine 5 mg daily** for **hypertension**
+- **Metformin 1000 mg BID** and **empagliflozin 10 mg daily** for **type 2 diabetes**
+- **Aspirin 81 mg daily** and **atorvastatin 40 mg daily** for **secondary stroke/cardiovascular prevention** after prior **TIA**
+- **Omeprazole 20 mg as needed** for **intermittent GERD**
+- **Occasional acetaminophen** for **knee osteoarthritis pain**",23441,2849,0.030401
+Q03,holistic,What medications is the patient currently taking and why?,workflow,3,"The patient is taking:
+
+- **Lisinopril** and **amlodipine** for **hypertension**
+- **Metformin** and **empagliflozin** for **type 2 diabetes**
+- **Aspirin** and **atorvastatin** for **secondary stroke prevention** after a prior **TIA**
+- **PRN omeprazole** for **intermittent GERD**
+- **Occasional acetaminophen** for **knee osteoarthritis pain**
+
+If you want, I can also summarize the **new atrial fibrillation medications** mentioned in some notes.",23398,2797,0.030135
+Q03,holistic,What medications is the patient currently taking and why?,agent,1,"The patient is currently taking:
+
+- **Apixaban 5 mg twice daily** — for **stroke prevention** in **paroxysmal atrial fibrillation**; also important because she has a **prior TIA** and other stroke risk factors.
+- **Metoprolol tartrate 25 mg twice daily** — for **rate control** of atrial fibrillation and to help with palpitations.
+- **Lisinopril 40 mg daily** — for **hypertension** and cardiovascular/renal protection.
+- **Amlodipine 2.5 mg daily** — for **hypertension**, though it was **reduced** because of **orthostatic lightheadedness/low standing blood pressures**.
+- **Metformin 1000 mg twice daily** — for **type 2 diabetes**.
+- **Empagliflozin 10 mg daily** — for **type 2 diabetes**.
+- **Atorvastatin 40 mg daily** — for **cholesterol control** and **secondary stroke prevention** after prior TIA.
+- **Aspirin 81 mg daily** — for **secondary prevention** related to prior TIA/small-vessel disease, though the notes say the need for dual therapy with apixaban is being reassessed.
+- **Omeprazole as needed** — for **GERD**.
+- **Acetaminophen as needed** — for **knee osteoarthritis pain**.
+
+Why she’s on them overall:
+- **AF/TIA stroke prevention:** apixaban, metoprolol, aspirin, atorvastatin
+- **Blood pressure control:** lisinopril, amlodipine, metoprolol
+- **Diabetes control:** metformin, empagliflozin
+- **GERD:** omeprazole PRN
+- **Osteoarthritis pain:** acetaminophen PRN
+
+If you want, I can also turn this into a **medication list with indication and any recent changes**.",6257,633,0.007541
+Q03,holistic,What medications is the patient currently taking and why?,agent,2,"The patient’s **current medications** and reasons for taking them appear to be:
+
+- **Apixaban 5 mg twice daily** — for **stroke prevention** in **paroxysmal atrial fibrillation** and because her **CHA2DS2-VASc risk is elevated** (age, HTN, diabetes, prior TIA).
+- **Metoprolol tartrate 25 mg twice daily** — for **rate control** in atrial fibrillation and to help with palpitations.
+- **Lisinopril 40 mg daily** — for **hypertension** and cardiovascular/renal protection.
+- **Amlodipine 2.5 mg daily** — for **hypertension**, though it was **reduced from 5 mg** because of **orthostatic lightheadedness**.
+- **Metformin 1000 mg twice daily** — for **type 2 diabetes**.
+- **Empagliflozin 10 mg daily** — for **type 2 diabetes** and metabolic/cardiovascular benefit.
+- **Atorvastatin 40 mg daily** — for **lipid control** and **secondary stroke prevention**.
+- **Aspirin 81 mg daily** — for **secondary prevention** after prior **TIA/small-vessel disease**; notes mention the need to reassess whether it should be continued together with apixaban.
+- **Omeprazole as needed** — for **GERD**.
+- **Acetaminophen as needed** — for **knee osteoarthritis pain**.
+
+Current issues tied to these meds:
+- Her **AF is rate controlled** on metoprolol and she is **anticoagulated** with apixaban.
+- Her **blood pressure is generally controlled**, but she has had **orthostatic symptoms**, which improved after **stopping/reducing amlodipine**.
+- Her **diabetes is fairly controlled** on metformin + empagliflozin.
+- She remains on **secondary prevention** meds because of her **prior TIA**.
+
+If you want, I can also turn this into a simple **med list table** with dose, indication, and whether it’s current or PRN.",14905,691,0.014288
+Q03,holistic,What medications is the patient currently taking and why?,agent,3,"The patient is currently taking:
+
+- **Apixaban 5 mg twice daily** — for **stroke prevention** in **paroxysmal atrial fibrillation**; also important given her **prior TIA** and other stroke risk factors.
+- **Metoprolol tartrate 25 mg twice daily** — for **rate control** of atrial fibrillation and to help with palpitations.
+- **Lisinopril 40 mg daily** — for **hypertension** and cardiovascular/renal protection.
+- **Amlodipine 2.5 mg daily** — for **hypertension**; dose was reduced because of **orthostatic lightheadedness**.
+- **Metformin 1000 mg twice daily** — for **type 2 diabetes**.
+- **Empagliflozin 10 mg daily** — for **type 2 diabetes**.
+- **Atorvastatin 40 mg daily** — for **lipid control** and **secondary stroke prevention**.
+- **Aspirin 81 mg daily** — for **secondary prevention** after **TIA/small-vessel disease**; cardiology noted the need to reassess whether it should continue alongside apixaban.
+- **Omeprazole as needed** — for **GERD**.
+- **Acetaminophen as needed** — for **knee osteoarthritis pain**.
+
+In short, her main active medication reasons are:
+- **AF/stroke prevention:** apixaban, metoprolol
+- **HTN:** lisinopril, amlodipine
+- **Diabetes:** metformin, empagliflozin
+- **Secondary vascular prevention:** atorvastatin, aspirin
+- **Symptom relief:** PRN omeprazole, PRN acetaminophen
+
+If you want, I can also separate these into a **current med list vs. meds that were stopped or reduced**.",6257,614,0.007456
+Q04,recent,Summarize the workup for this patient's lightheadedness,conversation,1,"I can help, but I need the patient details first.
+
+Please paste the relevant note, history, vitals, exam, labs, and any imaging/ECG results, and I’ll summarize the lightheadedness workup concisely.",29,53,0.00026
+Q04,recent,Summarize the workup for this patient's lightheadedness,conversation,2,"Sure — I can summarize it, but I’ll need the patient details first.
+
+Please paste the relevant note, labs, vitals, imaging, or timeline for the lightheadedness, and I’ll turn it into a concise workup summary. If you want, I can format it as:
+- **brief clinical summary**
+- **problem-based assessment**
+- **bullet list of completed workup**
+- **what’s still pending / next steps**",29,94,0.000445
+Q04,recent,Summarize the workup for this patient's lightheadedness,conversation,3,"I can help, but I need the patient details first.
+
+Please paste the relevant note, or at least:
+- age/sex
+- description of the lightheadedness (on standing, with exertion, constant, vertigo vs presyncope)
+- vitals, orthostatics, exam findings
+- labs/imaging already done
+- medications and key history
+
+Once you share that, I’ll summarize the workup concisely.",29,94,0.000445
+Q04,recent,Summarize the workup for this patient's lightheadedness,workflow,1,"The workup suggested **orthostatic, multifactorial lightheadedness** rather than a focal neurologic or ischemic cause. Key findings were:
+
+- **Positive orthostatic vitals** with a symptomatic BP drop
+- **New atrial fibrillation** on recent EKG, generally **rate controlled**
+- **Reassuring labs**: normal creatinine, potassium, hemoglobin, and TSH; no evidence of ACS or infection
+- **No focal neurologic deficits** or other red-flag symptoms
+
+Cardiology/PCP felt it was likely related to **volume status and medications** (especially antihypertensives, possibly dehydration), so they:
+- **Reduced amlodipine**
+- Advised **hydration** and **slow position changes**
+- Ordered further cardiac evaluation such as **TTE** and **ambulatory monitoring (Zio patch)**",22858,2284,0.027422
+Q04,recent,Summarize the workup for this patient's lightheadedness,workflow,2,"The workup for her lightheadedness showed **orthostatic hypotension** with a symptomatic BP drop on standing and **new atrial fibrillation** on ECG, while labs were otherwise reassuring (**normal CBC/hemoglobin, creatinine, potassium, TSH**, and negative troponin when checked). She had **no focal neurologic deficits, ischemic ECG changes, or other acute red flags**. Overall, the symptoms were felt to be **multifactorial**, likely due to **orthostasis/medication effect and possibly volume depletion**, so the plan included **hydration, slow position changes, BP/HR monitoring, medication adjustment (e.g., lowering amlodipine/holding rate-control meds if needed), and further cardiac evaluation with TTE and ambulatory rhythm monitoring (Zio patch)**.",22846,2300,0.027484
+Q04,recent,Summarize the workup for this patient's lightheadedness,workflow,3,"The workup for her lightheadedness showed **orthostatic hypotension** with a **symptomatic BP drop on standing**, along with **new atrial fibrillation** on ED EKG (rate controlled). Labs were otherwise reassuring, including **normal CBC/hemoglobin, creatinine, potassium, and TSH**, with no evidence of ACS, stroke, or other focal neurologic cause. The symptoms were felt to be **multifactorial**, likely from **volume depletion/orthostasis and medication effect** (e.g., antihypertensives), so the plan was **hydration, slow position changes, medication adjustment**, and **cardiology follow-up** with **TTE and ambulatory rhythm monitoring**.",22782,2182,0.026905
+Q04,recent,Summarize the workup for this patient's lightheadedness,agent,1,"The workup for her lightheadedness showed that it was most likely due to a combination of **orthostatic hypotension** and **atrial fibrillation**, with medication effects also contributing.
+
+Key findings:
+- **Orthostatic vitals were positive** on multiple visits, with symptomatic BP drops when standing.
+- In the ED on **3/8/26**, she was found to have **new-onset atrial fibrillation with RVR**, which likely contributed to palpitations and wooziness.
+- Repeat evaluations showed **rate-controlled paroxysmal AF**, but she continued to have positional dizziness.
+- There was **no evidence of acute stroke/TIA, ACS, infection, or major metabolic abnormality**:
+  - Neuro exams were nonfocal
+  - Troponins were negative
+  - CBC/CMP were unremarkable
+  - TSH was normal
+  - Kidney function and electrolytes were stable
+- Cardiology later obtained a **TTE**, which showed **normal LV systolic function, mild left atrial enlargement, and no significant valvular disease**.
+- A **14-day ambulatory monitor** was ordered to correlate symptoms with AF burden.
+
+Management/workup conclusions:
+- Her symptoms improved after **rate control and medication adjustment**, especially **reducing/stopping amlodipine** and later **metoprolol dose adjustment**.
+- By **5/15/26**, she reported **no further presyncope/lightheadedness**, and orthostasis had resolved in clinic.
+
+Overall, the evaluation supported **multifactorial presyncope/lightheadedness from orthostatic hypotension plus AF/medication effects**, rather than a neurologic or ischemic cause.",9909,729,0.010712
+Q04,recent,Summarize the workup for this patient's lightheadedness,agent,2,"The workup for her lightheadedness showed that it was **not due to stroke, heart attack, or infection**, but was instead most consistent with **orthostatic hypotension plus new atrial fibrillation**, with some contribution from blood pressure/rate-control medications.
+
+Key findings:
+- **ED evaluation (3/8/25 and again 3/18/26):**
+  - Symptoms were **positional**: worse when standing, improved by sitting.
+  - **Orthostatic vitals were positive** with symptomatic BP drops.
+  - EKG showed **new atrial fibrillation**; later she also had **AF with slow ventricular response** after treatment.
+  - **Troponins were negative**, CBC/CMP were unremarkable, and there was **no evidence of acute ischemia, infection, or focal neurologic deficit**.
+- **Neurology assessment:**
+  - No signs of recurrent TIA/stroke on exam.
+  - Neurology felt the episodes were **multifactorial**, mainly orthostatic, and did **not recommend repeat neuroimaging**.
+- **Cardiology assessment:**
+  - Confirmed **paroxysmal AF** with elevated stroke risk given prior TIA, HTN, and diabetes.
+  - Ordered/ reviewed additional cardiac workup:
+    - **TSH normal**
+    - **TTE** showed **normal LV systolic function**, **mild left atrial enlargement**, and **no significant valvular disease**
+    - **14-day ambulatory monitor** was planned to correlate symptoms and quantify AF burden
+- **Medication/volume assessment:**
+  - Lightheadedness was thought to be worsened by **antihypertensives and rate control therapy**.
+  - Management included **IV fluids**, **holding/reducing amlodipine**, and later **adjusting metoprolol**.
+  - She was also advised to **hydrate**, rise slowly, and monitor home BP/HR.
+
+Outcome:
+- After medication adjustments, especially **stopping amlodipine** and **reducing metoprolol**, her **presyncope/lightheadedness resolved** by the May 2026 PCP follow-up.
+
+If you want, I can also turn this into a one-line assessment or a brief timeline.",9909,848,0.011248
+Q04,recent,Summarize the workup for this patient's lightheadedness,agent,3,"The workup for her lightheadedness focused on two main causes: **orthostatic hypotension** and **cardiac arrhythmia (new atrial fibrillation)**.
+
+### Key findings
+- **Symptoms:** Recurrent brief “woozy”/lightheaded episodes, usually **when standing quickly** or after activity; sometimes associated with **palpitations**.
+- **Orthostatic vitals:** Repeatedly **positive**, with a symptomatic BP drop on standing.
+- **EKG:** Showed **new-onset atrial fibrillation** in 2025, later described as **paroxysmal AF**; at one point she had **AF with RVR**, and later **AF with slow ventricular response** when over–rate controlled.
+- **Labs:** Generally reassuring:
+  - **CBC normal** / no anemia
+  - **BMP/CMP normal** with stable creatinine and electrolytes
+  - **Troponin negative**
+  - **TSH normal**
+  - **Glucose not low**
+- **Neuro evaluation:** No focal deficits, and neurology felt there was **no indication for repeat brain imaging**; symptoms were not felt to represent a new stroke/TIA.
+- **No evidence of ACS, infection, CHF, or acute neurologic event**.
+
+### Assessment from the workup
+- Lightheadedness was felt to be **multifactorial**, mainly due to:
+  1. **Orthostatic hypotension**
+  2. **Atrial fibrillation** causing palpitations/lightheadedness
+  3. **Medication effects**, especially antihypertensives and later beta-blocker over–rate control
+
+### Management/workup steps taken
+- **IV fluids / hydration encouragement**
+- **Held or reduced BP/rate-control meds** when needed:
+  - Amlodipine held initially, then reduced to **2.5 mg daily**
+  - Metoprolol started for AF, later held in the ED when she developed **bradycardia**
+- **Anticoagulation started:** **Apixaban 5 mg BID** because of AF plus high stroke risk from prior TIA, HTN, and diabetes
+- **Cardiology follow-up**
+- **TTE ordered**
+- **14-day ambulatory monitor ordered**
+- **Home BP/HR and orthostatic logs** recommended
+
+If you want, I can also turn this into a very short one-line summary for a chart note.",7987,807,0.009622
+Q05,recent,What was the patient's most recent medication change?,conversation,1,"I don’t have the patient’s chart or medication list in this conversation, so I can’t determine the most recent medication change.
+
+If you paste the relevant medication history, progress note, or discharge summary, I can identify the latest change for you.",26,54,0.000262
+Q05,recent,What was the patient's most recent medication change?,conversation,2,"I don’t have the patient’s medication history or chart in this conversation, so I can’t determine the most recent medication change.
+
+If you paste the relevant medication list, progress note, or discharge summary, I can identify the latest change for you.",26,54,0.000262
+Q05,recent,What was the patient's most recent medication change?,conversation,3,"I don’t have the patient’s chart or medication list in this conversation, so I can’t determine the most recent medication change.
+
+If you paste the relevant medication history, progress note, or discharge summary, I can identify the latest change for you.",26,54,0.000262
+Q05,recent,What was the patient's most recent medication change?,workflow,1,"The most recent medication change was **starting apixaban 5 mg twice daily and metoprolol tartrate 25 mg twice daily, with amlodipine reduced from 5 mg to 2.5 mg daily**.",22379,1762,0.024713
+Q05,recent,What was the patient's most recent medication change?,workflow,2,"The most recent medication change was **starting apixaban 5 mg twice daily and metoprolol tartrate 25 mg twice daily, with amlodipine reduced to 2.5 mg daily** due to orthostatic symptoms.",22312,1711,0.024434
+Q05,recent,What was the patient's most recent medication change?,workflow,3,"The most recent medication change was **starting apixaban 5 mg twice daily and metoprolol tartrate 25 mg twice daily, with amlodipine reduced to 2.5 mg daily**.",22418,1790,0.024868
+Q05,recent,What was the patient's most recent medication change?,agent,1,"The most recent medication change was **stopping amlodipine** due to prior orthostatic symptoms/lightheadedness. At the 2026-05-15 primary care follow-up, the note says she felt better after **metoprolol dose reduction and stopping amlodipine**, and the plan was to **remain off amlodipine**.
+
+If you want, I can also summarize the full medication timeline of recent changes.",9599,260,0.008369
+Q05,recent,What was the patient's most recent medication change?,agent,2,"The most recent medication change was **stopping amlodipine** due to orthostatic symptoms/lightheadedness.
+
+- In the **2026-05-15 primary care note**, it says her symptoms improved after **metoprolol dose reduction and stopping amlodipine**, and the plan is to **remain off amlodipine**.
+- The prior cardiology note on **2026-04-10** had already **decreased amlodipine from 5 mg daily to 2.5 mg daily** because of orthostatic hypotension.
+
+So the latest change was **amlodipine discontinued**.",6253,348,0.006256
+Q05,recent,What was the patient's most recent medication change?,agent,3,"The most recent medication change was **stopping amlodipine** due to prior orthostasis/lightheadedness, with symptoms improving afterward. The note also mentions a **metoprolol dose reduction** before this visit, and she is now continuing **metoprolol 25 mg BID**.",3757,183,0.003641
+Q06,recent,Has the patient had any emergency department visits in the past year?,conversation,1,"I don’t have access to the patient’s medical record or visit history in this chat, so I can’t determine whether they’ve had any emergency department visits in the past year.
+
+If you share the chart note, encounter history, or a summary of visits, I can help identify and count ED visits.",30,65,0.000315
+Q06,recent,Has the patient had any emergency department visits in the past year?,conversation,2,"I don’t have the patient’s chart or visit history in this conversation, so I can’t tell whether they’ve had any emergency department visits in the past year.
+
+If you share the relevant record, I can help identify:
+- ED visits in the last 12 months
+- dates and reasons for visit
+- whether they were admitted or discharged",30,73,0.000351
+Q06,recent,Has the patient had any emergency department visits in the past year?,conversation,3,"I don’t have the patient’s chart or visit history here, so I can’t tell from the information provided.
+
+If you share the relevant records or a summary of encounters, I can help determine whether there were any emergency department visits in the past year.",30,55,0.00027
+Q06,recent,Has the patient had any emergency department visits in the past year?,workflow,1,"Yes — the note indicates a recent emergency department visit for lightheadedness/palpitations, where new-onset atrial fibrillation and orthostatic hypotension were found.",21611,960,0.020528
+Q06,recent,Has the patient had any emergency department visits in the past year?,workflow,2,"Yes — the notes indicate at least one recent emergency department visit in the past year, related to new-onset atrial fibrillation and orthostatic/lightheaded symptoms.",21489,898,0.020158
+Q06,recent,Has the patient had any emergency department visits in the past year?,workflow,3,"Yes. The notes indicate at least one recent emergency department visit in the past year, associated with new-onset atrial fibrillation and orthostatic symptoms.",21587,961,0.020515
+Q06,recent,Has the patient had any emergency department visits in the past year?,agent,1,"Yes. The patient had **at least two emergency department visits in the past year**:
+
+- **2025-03-08** — Emergency Medicine **ED Note**
+- **2026-03-18** — Emergency Medicine **ED Note**
+
+So the answer is **yes, there were ED visits within the past year**.",1851,145,0.002041
+Q06,recent,Has the patient had any emergency department visits in the past year?,agent,2,"Yes. The patient had at least **two emergency department visits in the past year**:
+
+- **2025-03-08** — **Emergency Medicine / ED Note**
+- **2026-03-18** — **Emergency Medicine / ED Note**
+
+There is also a **hospital discharge follow-up** note after the 2026 ED visit, which supports that the ED encounter was clinically significant.",1851,159,0.002104
+Q06,recent,Has the patient had any emergency department visits in the past year?,agent,3,"Yes. The patient had at least **two emergency department visits in the past year**:
+
+- **2025-03-08** — Emergency Medicine, **ED Note**
+- **2026-03-18** — Emergency Medicine, **ED Note**
+
+There is also a **hospital discharge follow-up** note on **2026-03-22** referencing the 2026-03-18 ED visit.",1965,182,0.002293
+Q07,specific,Summarize the cardiology notes for this patient,conversation,1,"Sure — please paste the cardiology notes (or upload the text), and I’ll summarize them for you.
+
+If you want, I can format the summary as:
+- **Brief clinical summary**
+- **Problem list / assessment**
+- **Plan / recommendations**
+- **Timeline of key cardiac events**",27,64,0.000308
+Q07,specific,Summarize the cardiology notes for this patient,conversation,2,"Sure — please paste the cardiology notes (or upload them), and I’ll summarize them clearly and concisely.
+
+If you want, I can format the summary as:
+- **Brief clinical summary**
+- **Problem list / assessment**
+- **Plan / recommendations**
+- **Key cardiac history, meds, tests, and follow-up**",27,72,0.000344
+Q07,specific,Summarize the cardiology notes for this patient,conversation,3,"Sure — please paste the cardiology notes (or upload them), and I’ll summarize them clearly and concisely.
+
+If you want, I can format the summary as:
+- **Brief clinical summary**
+- **Assessment/plan**
+- **Key cardiac history, testing, and medications**
+- **Patient-friendly summary**",27,68,0.000326
+Q07,specific,Summarize the cardiology notes for this patient,workflow,1,"Cardiology notes show **new-onset paroxysmal atrial fibrillation** discovered during evaluation for **lightheadedness/orthostatic symptoms**. She has a **high stroke risk** due to prior **TIA**, HTN, and diabetes, so she was started on **apixaban 5 mg BID** for anticoagulation and **metoprolol tartrate 25 mg BID** for rate control. Because of **orthostatic hypotension/low-normal BP**, **amlodipine was reduced** (and in some notes later held/stopped), with advice for **hydration, slow position changes, and home BP/HR monitoring**.
+
+She has had **no chest pain, dyspnea, syncope, or bleeding**, and her AF is generally **rate controlled**. Workup/follow-up plans included **CBC/BMP/Mg/TSH**, **repeat EKG**, **transthoracic echo**, and **ambulatory monitoring (Zio/14-day monitor)** with cardiology follow-up in **4–6 weeks**. She also remains on **aspirin and atorvastatin** for prior TIA/secondary prevention, though dual therapy was to be reviewed by cardiology.",23009,2546,0.028714
+Q07,specific,Summarize the cardiology notes for this patient,workflow,2,"Cardiology summary: The patient has **new paroxysmal atrial fibrillation**, currently **rate controlled on metoprolol tartrate 25 mg BID** and **anticoagulated with apixaban 5 mg BID** because of **high stroke risk** from prior TIA, HTN, DM, and age. She also has **orthostatic hypotension with recurrent positional lightheadedness/presyncope**, likely medication/volume related, so **amlodipine was reduced to 2.5 mg daily** and hydration/home BP-HR monitoring were advised. Cardiology ordered further workup including **TTE, ambulatory rhythm monitoring (Zio/14-day monitor), and labs (CBC, BMP, Mg, TSH)** with follow-up in **4–6 weeks**. She has **no chest pain, dyspnea, syncope, edema, or bleeding**, and continues **lisinopril, atorvastatin, and aspirin** for vascular prevention, though whether aspirin should continue with apixaban is to be reviewed.",23337,2814,0.030166
+Q07,specific,Summarize the cardiology notes for this patient,workflow,3,"The cardiology notes describe a woman with **HTN, T2DM, obesity, and prior TIA** who was initially stable on **lisinopril, amlodipine, aspirin, and atorvastatin** with no chest pain, dyspnea, palpitations, or syncope. She later developed **new atrial fibrillation** associated with **recurrent lightheadedness/orthostatic hypotension**. Because of her high stroke risk from **prior TIA + HTN + DM**, she was started on **apixaban** for anticoagulation and **metoprolol** for rate control. Her **amlodipine was reduced or held** due to low BP/orthostasis, and she was advised to **hydrate, monitor BP/HR**, and follow up with cardiology.
+
+Planned/ordered workup included **EKG, orthostatics, labs (CBC/BMP/Mg/TSH), transthoracic echo, and ambulatory rhythm monitoring (Zio/14-day monitor)**. Overall, her AF is described as **rate controlled**, with **no recurrent chest pain, dyspnea, syncope, or focal neurologic deficits**, and secondary stroke prevention remains important.",23217,2734,0.029716
+Q07,specific,Summarize the cardiology notes for this patient,agent,1,"Here’s a concise summary of the patient’s cardiology course based on the cardiology notes:
+
+### Cardiology summary
+- **New atrial fibrillation / paroxysmal AF**
+  - First identified in 2024 on ED ECG and confirmed on cardiology follow-up.
+  - Generally **rate controlled** throughout follow-up.
+  - Stroke risk is high due to **age, HTN, diabetes, and prior TIA**.
+
+- **Anticoagulation / stroke prevention**
+  - Started and continued on **apixaban 5 mg twice daily** for stroke prevention.
+  - She has **tolerated it well** with **no reported bleeding, melena, or falls**.
+
+- **Rate control**
+  - Started and continued on **metoprolol tartrate 25 mg twice daily**.
+  - Palpitations improved over time, and heart rates have generally been in the **60s–70s**.
+
+- **Lightheadedness / orthostatic hypotension**
+  - Recurrent brief positional dizziness/“woozy” episodes, usually with standing quickly or prolonged standing/gardening.
+  - Orthostatic vitals were repeatedly positive, suggesting **orthostatic hypotension**.
+  - Symptoms were felt to be **multifactorial**, likely related to **antihypertensives**, possible **volume depletion**, and possibly **SGLT2 inhibitor use**.
+  - Management emphasized **hydration, slow position changes, home BP/HR logs**, and consideration of compression stockings.
+
+- **Blood pressure management**
+  - BP often ran **low-normal**, especially standing.
+  - **Amlodipine was reduced from 5 mg to 2.5 mg daily**.
+  - **Lisinopril 40 mg daily** was continued.
+  - Further de-escalation was considered if orthostasis persisted.
+
+- **Secondary prevention / vascular risk**
+  - Continued **atorvastatin 40 mg daily**.
+  - **Aspirin 81 mg daily** was continued for a period because of prior TIA, with plans to reassess whether dual therapy with apixaban was still needed.
+  - Prior TIA remained an important part of her risk profile.
+
+- **Cardiac workup**
+  - **TTE** showed **normal LV systolic function**, **mild left atrial enlargement**, and **no significant valvular disease**.
+  - Ambulatory monitoring was ordered/planned to assess AF burden and correlate symptoms.
+
+### Overall impression
+The cardiology notes describe a patient with **paroxysmal atrial fibrillation** that is **well controlled on metoprolol and apixaban**, with the main ongoing issue being **intermittent orthostatic lightheadedness** rather than cardiac ischemia or heart failure. Her cardiac structure/function appears reassuring on echo, and management has focused on **stroke prevention** and **reducing orthostatic symptoms** by adjusting blood pressure medications and encouraging hydration.
+
+If you want, I can also turn this into a **problem-based cardiology timeline** or a **one-paragraph chart summary**.",6972,899,0.009274
+Q07,specific,Summarize the cardiology notes for this patient,agent,2,"Here’s a concise summary of the patient’s cardiology notes:
+
+- **New diagnosis of atrial fibrillation (AF):** First identified in 2024 on ED ECG and later characterized as **paroxysmal AF**. Ventricular rate has generally been **controlled**.
+- **Stroke risk is high:** She has multiple CHA2DS2-VASc risk factors, including **age, hypertension, diabetes, and prior TIA**, so cardiology emphasized **stroke prevention**.
+- **Anticoagulation started and continued:** She was started on **apixaban 5 mg twice daily** and has tolerated it well, with **no reported bleeding, melena, or falls**.
+- **Rate control:** She was started on **metoprolol tartrate 25 mg twice daily**, which improved palpitations and kept her heart rate in the 60s–70s.
+- **Orthostatic lightheadedness:** A recurring issue across visits. Symptoms are usually triggered by **standing quickly or prolonged standing/gardening**. Orthostatic vitals were repeatedly positive, and cardiology felt this was likely due to **orthostatic hypotension**, possibly worsened by medications and volume status.
+- **Blood pressure management adjusted:** Because of low-normal pressures and orthostasis, **amlodipine was reduced from 5 mg to 2.5 mg daily**. **Lisinopril 40 mg daily** was continued.
+- **Secondary prevention after TIA:** She remained on **atorvastatin 40 mg daily** and **aspirin 81 mg daily** for a period, though cardiology repeatedly noted they would **reassess the need for aspirin** while on apixaban.
+- **Workup/results:**  
+  - **TTE:** Normal LV systolic function, **mild left atrial enlargement**, and **no significant valvular disease**.  
+  - Labs were stable: **normal creatinine, potassium, hemoglobin, and TSH**.
+- **Overall course:** By the most recent cardiology note, **palpitations improved**, there was **no recurrent syncope**, and AF remained **rate controlled**, but she still had **intermittent positional dizziness**.
+- **Ongoing plan:** Continue apixaban and metoprolol, maintain hydration, avoid rapid position changes/prolonged standing, monitor home BP/HR, and follow up with cardiology.",6972,757,0.008636
+Q07,specific,Summarize the cardiology notes for this patient,agent,3,"Here’s a concise summary of the patient’s cardiology course based on the cardiology notes:
+
+### Cardiology summary
+- **New atrial fibrillation / paroxysmal AF**
+  - First identified in 2024 after an ED ECG showed **atrial fibrillation with controlled rate**.
+  - AF has remained **rate controlled** on **metoprolol tartrate 25 mg BID**.
+  - Stroke risk is high (**CHA2DS2-VASc elevated**) due to **age, hypertension, diabetes, and prior TIA**.
+
+- **Anticoagulation / stroke prevention**
+  - Started and continued on **apixaban 5 mg BID** for stroke prevention.
+  - She has **tolerated apixaban without bleeding**, melena, or falls.
+  - **Aspirin 81 mg daily** was continued for a period because of prior TIA, with repeated plans to reassess whether dual therapy is still needed.
+
+- **Lightheadedness / orthostatic hypotension**
+  - Recurrent brief **positional dizziness/lightheadedness** has been a persistent issue, usually when standing quickly or after prolonged standing/gardening.
+  - Orthostatic vitals were repeatedly positive, suggesting **orthostatic hypotension**.
+  - Symptoms were felt to be **multifactorial**, likely related to **antihypertensives**, possible **volume depletion**, and possibly **SGLT2 inhibitor use**.
+  - Management emphasized **hydration, slow position changes, home BP/HR logs**, and sometimes **compression stockings**.
+
+- **Hypertension management**
+  - Blood pressure has often been **low-normal**, especially standing.
+  - **Amlodipine was reduced to 2.5 mg daily** because of orthostasis.
+  - **Lisinopril 40 mg daily** was generally continued.
+  - Later notes describe BP as **controlled but with intermittent low standing pressures**.
+
+- **Cardiac workup**
+  - **TTE** showed **normal LV systolic function**, **mild left atrial enlargement**, and **no significant valvular disease**.
+  - Ambulatory monitoring was ordered/planned to assess AF burden and symptom correlation.
+
+- **Other relevant cardiovascular risk factors**
+  - **Type 2 diabetes**, **obesity**, and **prior TIA (3/2025)** are ongoing comorbidities.
+  - She remained active, walking and gardening regularly.
+  - No evidence of **heart failure**, **ACS**, or significant structural heart disease in the notes.
+
+### Current cardiology plan at last follow-up
+- Continue **apixaban 5 mg BID**
+- Continue **metoprolol 25 mg BID**
+- Continue **amlodipine 2.5 mg daily** and **lisinopril 40 mg daily**
+- Continue **atorvastatin 40 mg daily**
+- Continue to reassess need for **aspirin**
+- Monitor orthostatic symptoms, BP, and HR
+- Follow up with cardiology as needed / in routine interval
+
+If you want, I can also turn this into a **problem-oriented cardiology timeline** or a **one-paragraph chart summary**.",6972,920,0.009369
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,conversation,1,"I don’t have enough context to know which patient or note you’re referring to.
+
+If you paste the relevant chart note, discharge summary, or message thread, I can tell you exactly what Dr. Helen Wu recommended.",28,48,0.000237
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,conversation,2,"I don’t have enough context to know which patient or note you’re referring to.
+
+If you paste the relevant chart note, discharge summary, or message thread mentioning Dr. Helen Wu, I can tell you exactly what she recommended.",28,50,0.000246
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,conversation,3,"I don’t have enough context to know which patient or note you’re referring to.
+
+If you paste the relevant chart note, discharge summary, or message thread, I can tell you exactly what Dr. Helen Wu recommended.",28,48,0.000237
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,workflow,1,"Dr. Helen Wu recommended continuing the patient’s current medications for HTN, diabetes, and secondary stroke prevention, along with lifestyle measures like diet, exercise, and weight loss. She also advised PRN omeprazole for GERD, conservative treatment for knee osteoarthritis, repeat labs before the next visit, and follow-up in about 3–4 months.",23143,2461,0.028432
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,workflow,2,"Dr. Helen Wu recommended **continuing the patient’s current medications for HTN, diabetes, and secondary stroke prevention**, along with **PRN omeprazole for GERD**. She also advised **low-impact exercise, weight loss, conservative knee OA care, baseline labs, and obtaining outside records** to further evaluate the prior lightheadedness/new AF concern.",23196,2527,0.028769
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,workflow,3,"Dr. Helen Wu recommended **continuing the patient’s current medications** for **HTN, diabetes, and secondary stroke prevention**, along with **PRN omeprazole for GERD**. She also advised **low-impact exercise, weight loss, conservative knee osteoarthritis care, baseline/follow-up labs, and obtaining outside records** to further evaluate the prior lightheadedness/new AF concern.",23177,2508,0.028669
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,agent,1,"Dr. Helen Wu recommended:
+
+- Continue **apixaban 5 mg twice daily** for stroke prevention
+- Continue **metoprolol 25 mg twice daily** for AF rate control
+- **Decrease amlodipine to 2.5 mg daily** because of orthostatic/lightheaded symptoms
+- Continue **lisinopril 40 mg daily**
+- Encourage **hydration**, **slow position changes**, and **avoiding prolonged standing**; consider **compression stockings** if symptoms persist
+- Continue **atorvastatin 40 mg daily** and **aspirin 81 mg daily** for now, with reassessment later
+- Continue diabetes meds per PCP and monitor volume status
+- Order **BMP, CBC, and repeat orthostatic vitals** in 4–6 weeks
+- Follow up with cardiology in **6–8 weeks**
+
+If you want, I can also summarize the recommendation in one sentence.",5922,318,0.005873
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,agent,2,"Dr. Helen Wu recommended:
+
+- Continue **apixaban 5 mg twice daily** for stroke prevention
+- Continue **metoprolol 25 mg twice daily** for AF rate control
+- **Reduce amlodipine to 2.5 mg daily** and continue **lisinopril 40 mg daily** for now
+- **Hydrate well**, change positions slowly, and keep a **home BP/HR log** with orthostatic readings
+- Get a **transthoracic echocardiogram (TTE)**
+- Wear a **14-day ambulatory monitor**
+- Continue **atorvastatin 40 mg daily** and **aspirin 81 mg daily** for now
+- Follow up with cardiology in **4–6 weeks** or sooner if symptoms worsen
+
+If you want, I can also summarize the recommendation in one sentence.",3754,301,0.00417
+Q08,specific,What did Dr. Helen Wu recommend for this patient?,agent,3,"Dr. Helen Wu recommended:
+
+- Continue **apixaban 5 mg twice daily** for stroke prevention
+- Continue **metoprolol 25 mg twice daily** for rate control
+- **Reduce amlodipine to 2.5 mg daily** and continue **lisinopril 40 mg daily** for now
+- **Hydrate well**, change positions slowly, and keep a **home BP/HR log** with orthostatic readings
+- Order a **transthoracic echocardiogram (TTE)**
+- Arrange a **14-day ambulatory monitor**
+- Continue **atorvastatin 40 mg daily** and **aspirin 81 mg daily** for now
+- **Follow up in cardiology in 4–6 weeks**
+
+If you want, I can also summarize the reason for these recommendations in plain language.",3506,278,0.003881
+Q09,specific,Give me a summary of the patient's most recent ED visit,conversation,1,"I can do that, but I don’t have the patient’s ED record in this chat.
+
+Please paste the ED note, discharge summary, or key details from the visit, and I’ll summarize it concisely. If helpful, I can format it as:
+- **Reason for visit**
+- **Key findings**
+- **Tests/imaging**
+- **Treatment given**
+- **Diagnosis**
+- **Disposition/follow-up**",28,90,0.000426
+Q09,specific,Give me a summary of the patient's most recent ED visit,conversation,2,"I can do that, but I don’t have the patient’s ED record in this chat.
+
+Please paste the ED note, discharge summary, or key details from the most recent visit, and I’ll summarize it concisely. If you want, I can format it as:
+
+- **Reason for visit**
+- **Pertinent history/exam**
+- **Tests/results**
+- **Treatment in ED**
+- **Disposition**
+- **Follow-up / return precautions**",28,97,0.000458
+Q09,specific,Give me a summary of the patient's most recent ED visit,conversation,3,"I can help with that, but I don’t have the patient’s ED record in this chat.
+
+Please paste the ED note, discharge summary, or key details from the most recent visit, and I’ll summarize it concisely. If you want, I can format the summary as:
+
+- **Reason for visit**
+- **Key findings/vitals/tests**
+- **ED treatment**
+- **Diagnosis**
+- **Discharge plan / follow-up**
+- **Return precautions**",28,105,0.000494
+Q09,specific,Give me a summary of the patient's most recent ED visit,workflow,1,"Her most recent ED visit was for recurrent lightheadedness/“woozy” episodes and palpitations, where she was found to have **new-onset atrial fibrillation** with a **controlled ventricular rate** and **orthostatic hypotension**. Workup was reassuring, with **no chest pain, syncope, focal neurologic deficits, acute ischemic ECG changes, or major lab abnormalities**. She was treated with **metoprolol** for rate control and **apixaban** for anticoagulation, with **IV fluids/hydration** and advice to **hold or review blood pressure-lowering meds** and follow up closely with PCP/cardiology.",21768,1260,0.021996
+Q09,specific,Give me a summary of the patient's most recent ED visit,workflow,2,"At her most recent ED visit, she presented with recurrent lightheadedness/“woozy” episodes and was found to have **new-onset atrial fibrillation** with a **controlled ventricular rate** plus **orthostatic hypotension**. Workup was reassuring, with **no acute ischemic changes** and otherwise normal labs. She was started on **apixaban** and **metoprolol**, and her blood pressure medications were adjusted (amlodipine reduced/held) with **outpatient cardiology follow-up** arranged.",21826,1289,0.02217
+Q09,specific,Give me a summary of the patient's most recent ED visit,workflow,3,"At the most recent ED visit, the patient presented with recurrent lightheadedness/“woozy” episodes and palpitations. She was found to have **new-onset atrial fibrillation** with **rate control** and **orthostatic hypotension/dehydration** contributing to symptoms. Workup was reassuring, with **no acute ischemic changes, negative troponin, normal labs, and no focal neurologic deficits**. She was treated with **IV fluids**, started on **metoprolol** for rate control and **apixaban** for stroke prevention, and advised close PCP/cardiology follow-up.",21876,1350,0.022482
+Q09,specific,Give me a summary of the patient's most recent ED visit,agent,1,"The patient’s most recent ED visit was on **2026-03-18** for **lightheadedness and palpitations**.
+
+### Brief summary
+- **Presentation:** 1 day of recurrent episodes of lightheadedness with chest “fluttering” and mild nausea, lasting about 10–15 minutes each.
+- **Relevant history:** Hypertension, type 2 diabetes, obesity, prior TIA (3/2025), and **paroxysmal atrial fibrillation** on **apixaban** and **metoprolol**.
+- **Symptoms denied:** No chest pain, shortness of breath, syncope, focal neurologic deficits, vision loss, fever, or GI bleeding.
+
+### Key findings
+- **Vitals:** Low blood pressure with orthostatic drop and **bradycardia**.
+- **EKG:** **Atrial fibrillation with slow ventricular response** (rate about 48–55), no acute ischemic changes.
+- **Labs:** CBC/CMP normal, creatinine 0.9, potassium 4.2, hemoglobin 13.1, glucose 132, troponin negative.
+
+### ED assessment
+- Symptoms were felt to be most consistent with **symptomatic bradycardia and orthostatic hypotension**, likely related to **over–rate control/medications**.
+- No evidence of acute stroke or acute coronary syndrome.
+
+### ED management / plan
+- **Held metoprolol and amlodipine**
+- **Continued apixaban**
+- Gave **IV fluids** and encouraged oral hydration
+- Monitored on telemetry and planned repeat EKG after treatment
+- If improved, plan was **discharge with close PCP/cardiology follow-up in 48–72 hours** for medication review and AF rate-control adjustment
+
+### Return precautions
+- Syncope, chest pain, shortness of breath, focal neurologic symptoms, persistent palpitations, or worsening dizziness.",3229,468,0.004528
+Q09,specific,Give me a summary of the patient's most recent ED visit,agent,2,"The patient’s most recent ED visit was on **2026-03-18** for **lightheadedness and palpitations**.
+
+### Why they came in
+- Had **2 episodes** of **fluttering in the chest** with **mild nausea**
+- Each episode lasted about **10–15 minutes**
+- Symptoms started after **standing up from sitting**
+- No chest pain, shortness of breath, syncope, or focal neurologic symptoms
+
+### Key findings
+- **Low blood pressure**, especially on standing: **98/62 sitting → 86/58 standing**
+- **Bradycardia** with irregular rhythm: HR about **52**
+- EKG showed **atrial fibrillation with slow ventricular response** (rate ~48–55)
+- Labs were reassuring:
+  - **Troponin negative**
+  - **CBC/CMP unremarkable**
+  - **Creatinine 0.9**, **K 4.2**, **Hgb 13.1**
+  - Glucose **132**
+
+### ED assessment
+- Symptoms were felt to be due to **symptomatic bradycardia and orthostatic hypotension**, likely from **over–rate control and/or medications**
+- She was in **atrial fibrillation**, but **anticoagulated on apixaban**
+- No evidence of **acute stroke** or **heart attack**
+
+### Treatment/plan
+- **Held metoprolol and amlodipine**
+- Gave **IV fluids** and encouraged oral hydration
+- Continued **apixaban**
+- Monitored on cardiac telemetry and planned repeat EKG after treatment
+- If improved, plan was **discharge with close PCP/cardiology follow-up in 48–72 hours** for medication review and AF rate-control planning
+
+### Return precautions
+She was told to return for:
+- **Syncope**
+- **Chest pain**
+- **Shortness of breath**
+- **Focal neurologic deficits**
+- **Persistent palpitations**
+- **Worsening dizziness**
+
+If you want, I can also summarize the **follow-up note after this ED visit**.",2245,478,0.003835
+Q09,specific,Give me a summary of the patient's most recent ED visit,agent,3,"The patient’s most recent ED visit was on **2026-03-18** for **lightheadedness and palpitations**.
+
+### Brief summary
+- She had **2 episodes of dizziness/lightheadedness with chest “fluttering”** over 1 day, each lasting about **10–15 minutes**.
+- Symptoms were **worse when standing** and improved with rest.
+- She **denied chest pain, shortness of breath, syncope, or neurologic symptoms**.
+
+### Key findings
+- **Vitals:** low blood pressure with orthostasis and **bradycardia**  
+  - Sitting BP **98/62**, standing **86/58**
+  - HR about **52**, irregular
+- **EKG:** **atrial fibrillation with slow ventricular response** (rate ~48–55), no ischemic changes
+- **Labs:** CBC/CMP normal, **troponin negative**, glucose 132, creatinine 0.9, potassium 4.2
+
+### ED assessment
+- Symptoms were felt most likely due to **over–rate control and orthostatic hypotension**, possibly related to medications.
+- She was in **paroxysmal atrial fibrillation** but remained **anticoagulated on apixaban**.
+- No evidence of acute stroke or heart attack.
+
+### ED treatment / plan
+- **Held metoprolol and amlodipine**
+- Gave **IV fluids** and encouraged oral hydration
+- Monitored on cardiac telemetry
+- Planned repeat EKG and reassessment
+- If improved, discharge with **close PCP/cardiology follow-up in 48–72 hours** for medication review and AF rate-control planning
+
+### Return precautions
+She was advised to return for **syncope, chest pain, shortness of breath, focal neurologic deficits, persistent palpitations, or worsening dizziness**.
+
+If you want, I can also summarize the **follow-up cardiology note** from the next day.",3229,473,0.00455
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,conversation,1,"I don’t have the patient’s chart or any 2025 TIA workup details in this conversation, so I can’t determine the outcome.
+
+If you paste the relevant note, discharge summary, imaging results, or lab/workup timeline, I can summarize the outcome for you.",33,61,0.000299
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,conversation,2,"I don’t have the patient’s chart or any 2025 TIA workup details in this conversation, so I can’t determine the outcome.
+
+If you paste the relevant note, discharge summary, or test results, I can help summarize the outcome quickly.",33,56,0.000277
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,conversation,3,"I don’t have the patient’s chart or any 2025 workup details in this chat, so I can’t determine the outcome of the TIA evaluation.
+
+If you paste the relevant note, discharge summary, imaging results, or labs, I can help summarize the outcome quickly.",33,61,0.000299
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,workflow,1,"The 2025 TIA workup was **reassuring/negative for an acute stroke**, with **no persistent or recurrent focal neurologic deficits**. She was managed as a **prior TIA** and continued on **secondary prevention** (aspirin and atorvastatin). In later notes, **new atrial fibrillation** was identified as a likely stroke risk factor, and **apixaban** was started.",22270,1580,0.023813
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,workflow,2,"The 2025 TIA workup was **reassuring/negative for an acute stroke or ongoing TIA**: she had **full neurologic recovery**, **no residual deficits**, and **no recurrent focal neurologic symptoms**. She was continued on **aspirin and atorvastatin** for secondary prevention, and **new atrial fibrillation** was later identified as an important stroke-risk factor, prompting **apixaban**.",22448,1695,0.024464
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,workflow,3,"The 2025 TIA workup was **reassuring overall**: she had **no acute stroke or persistent neurologic deficits**, and later follow-up suggested her brief spells were **more consistent with orthostatic hypotension/presyncope than recurrent TIA**. A key finding was **new atrial fibrillation**, so she was started on **apixaban** for secondary stroke prevention.",22277,1587,0.023849
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,agent,1,"The 2025 TIA workup did **not show an acute stroke**. Neurology reviewed the prior brain imaging and documented **no acute infarct**, and because she had **no focal neurologic deficits** on follow-up, they felt there was **no indication for repeat neuroimaging**.
+
+Overall, the episodes were felt to be **more consistent with orthostatic hypotension/presyncope** rather than recurrent TIA. During the workup, she was also found to have **new-onset atrial fibrillation**, which increased her stroke risk, so she was started on **apixaban** for secondary stroke prevention.",6008,348,0.006072
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,agent,2,"The 2025 TIA workup was **negative for an acute stroke/infarct**. Neurology reviewed the prior brain imaging and documented **no acute infarct** and **no focal neurologic deficits** on exam.
+
+Overall, the episodes were felt to be **more consistent with orthostatic hypotension/presyncope rather than recurrent TIA**. During the workup, a **new-onset atrial fibrillation** was also identified, which increased her embolic stroke risk, so she was started on **apixaban** for stroke prevention.",9795,305,0.008719
+Q10,specific,What was the outcome of the patient's TIA workup in 2025?,agent,3,"The 2025 TIA workup was **negative for an acute stroke/infarct**. Neurology reviewed the prior brain imaging and documented **no acute infarct** and **no persistent focal neurologic deficits**.
+
+Overall, the episodes were felt to be **more consistent with orthostatic hypotension/presyncope rather than recurrent TIA**. During the workup, **new-onset atrial fibrillation** was also identified, which increased her embolic stroke risk, so she was started on **apixaban** for stroke prevention.",9795,303,0.00871
