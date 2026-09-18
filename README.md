@@ -259,6 +259,4 @@ See `code/generate_notes.py` for the generation script and patient profile.
 
 This talk was presented at [posit::conf(2026)](https://posit.co/conference/) in Houston, TX.
 
-**Speaker:** Timothy Keyes — Senior Data Scientist, Stanford Health Care
-
-Questions or feedback? Feel free to open an issue or reach out.
+If you have questions or feedback, feel free to open an issue or reach out.
